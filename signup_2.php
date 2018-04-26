@@ -58,7 +58,7 @@
 
                           <ul class="nav navbar-nav top-nav-text" style="font-family: 'Ubuntu',sans-serif; text-transform: uppercase; font-weight: 500; font-size: 40px;">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="resume.html">About</a></li> 
+                            <li><a href="about.php">About</a></li> 
                             <li><a href="resume.html">How It Works</a></li> 
                             <li><a href="resume.html">Contact</a></li> 
                           </ul>
@@ -76,7 +76,16 @@
     </div>
     <!-- Header Section End -->
     <!-- Enter your code here -->
-  
+    <div class="bg-grey">
+      <table>
+        <form>
+          <tr><td>Full Name</td><td> <input type="text" name="first_name"> <input type="text" name="last_name"></td></tr>
+          <tr><td>Email</td><td> <input type="email" name="email"></td><tr>
+          <tr><td>Address</td><td><input type="textbox" name="address"></td></tr>
+          <tr><td></td><td><input type="text" name="city"></tr>
+        </form>
+    </table>
+    </div>
    
     <!-- Close your code here-->  
     <!-- Footer Section Start -->

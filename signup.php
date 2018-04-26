@@ -41,35 +41,35 @@
   <body>
     <!-- Header Section Start -->
     <div class="header">
-      <nav class="navbar navbar-default main-navigation" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-            <!-- Stat Toggle Nav Link For Mobiles -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- End Toggle Nav Link For Mobiles -->
-            <a class="navbar-brand logo" href="index.php"><img src="assets/img/logo.png" width=90% height=130% alt=""></a>
-          </div>
-          <!-- brand and toggle menu for mobile End -->
+                <nav class="navbar navbar-default main-navigation" role="navigation">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand logo" href="index.php"><img src="assets/img/w_logo.png" width="60px" height="60px" alt=""></a>
+                    </div>
 
-          <!-- Navbar Start -->
-          <div class="collapse navbar-collapse" id="navbar">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="login.php"><i class="lnr lnr-enter"></i> Login</a></li>
-              <li><a href="signup.php"><i class="lnr lnr-user"></i> Signup</a></li>
-              <li class="postadd">
-                <a class="btn btn-danger btn-post" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
-              </li>
-            </ul>
-          </div>
-          <!-- Navbar End -->
-        </div>
-      </nav>
-
+                          <ul class="nav navbar-nav top-nav-text" style="font-family: 'Ubuntu',sans-serif; text-transform: uppercase; font-weight: 500; font-size: 40px;">
+                            <li class="active"><a href="index.php">Home</a></li>
+                            <li><a href="about.php">About</a></li> 
+                            <li><a href="resume.html">How It Works</a></li> 
+                            <li><a href="resume.html">Contact</a></li> 
+                          </ul>
+                    <div class="collapse navbar-collapse" id="navbar">
+                      <ul class="nav navbar-nav navbar-right">
+                        <li><a href="login.php"><i class="lnr lnr-enter"></i> Login</a></li>
+                        <li><a href="signup.php"><i class="lnr lnr-user"></i> Signup</a></li>
+                        <li class="postadd">
+                          <a class="btn btn-common btn-text" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </nav>
     </div>
     <!-- Header Section End -->
 

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +79,7 @@
     <!-- Start Content -->
     <div id="content">
       <div class="container">
-
+          <?php echo "Welcome" . $_SESSION["email"]; ?>
       </div>
     </div>
     <!-- End Content -->
