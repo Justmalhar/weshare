@@ -58,16 +58,16 @@
 
                           <ul class="nav navbar-nav top-nav-text" style="font-family: 'Ubuntu',sans-serif; text-transform: uppercase; font-weight: 500; font-size: 40px;">
                             <li class="active"><a href="index.php">Home</a></li>
-                            <li><a href="resume.html">About</a></li> 
-                            <li><a href="resume.html">How It Works</a></li> 
-                            <li><a href="resume.html">Contact</a></li> 
+                            <li><a href="about.php">About</a></li> 
+                            <li><a href="howitworks.php">How It Works</a></li> 
+                            <li><a href="#">Contact</a></li> 
                           </ul>
                     <div class="collapse navbar-collapse" id="navbar">
                       <ul class="nav navbar-nav navbar-right">
                         <li><a href="login.php"><i class="lnr lnr-enter"></i> Login</a></li>
                         <li><a href="signup.php"><i class="lnr lnr-user"></i> Signup</a></li>
                         <li class="postadd">
-                          <a class="btn btn-common btn-text" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
+                          <a class="btn-yellow btn btn-common btn-text" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
                         </li>
                       </ul>
                     </div>
@@ -75,16 +75,43 @@
                 </nav>
     </div>
     <!-- Header Section End -->
-    <div class="about-intro text-center" style="background-color: black; color: white; height: 400px;">
+    <div class="about-intro text-center" style="background-color: black; color: white; height: 900px;">
       <h1 class="about-intro" style="padding-top: 45px; font-size: 48px;">Welcome to WeWork!</h1>
       <h3 style="padding-top: 35px;">We’re reinventing the workday<h3>
-      <p class="" style="padding-top: 35px; font-size: 20px;">People aren’t one-size-fits-all, so our jobs shouldn’t be either. <br> Flexibility makes it possible to make money and the comfort you deserve.</p>
+      <p class="" style="padding-top: 35px;font-size: 20px;">People aren’t one-size-fits-all, so our jobs shouldn’t be either. <br> Flexibility makes it possible to make money and the comfort you deserve.</p><br>
+      <p><h1> Understanding WeWork </h1></p><br>
+      <div class="text-center" style=" display: flex; text-align: justify-all; width: 700px; margin-left: 500px; float: left;">
+        <h4>WeWork is a crowdsourcing platform for individuals to find work or post a job and find workers.
+          WeWork has a coin-based system which allows you to pay an individual in coins for your work, and the balance can be replenished by working for someone else.
+      Through this marketplace, individuals can find short term or time-based employment for on-demand services.
+      The work ranges from small household services, repairs, fixtures to personal services.
+      Be it getting a plumbing job done, improving your fitness through yoga,learning to play the guitar,
+      decorating your home or getting candid photos of your wedding clicked, we are a sure shot destination for your service needs.</h4>
+      </div>
+      <br>
+      <div class="text-center" style=" display: flex; text-align: justify-all; width: 700px; margin-left: 300px;"></div>
+      <p><h1 style="margin-top: 20px;">Why do we think it's perfect for you! </h1></p><br>
+      <div class="text-center" style=" display: flex; width: 700px; margin-left: 520px;">
+      <p><h4>
+      <ul>
+        <li style="list-style-type: circle; float: left;">A no desk-bound approach for workers allowing them to work from anywhere.</li>
+        <li style="list-style-type: circle; float: left;">No standard office hours, makes it easier for people to work on the basis of convenience.</li>
+        <li style="list-style-type: circle; float: left;">Pay by task and not by the hour, fair approach for both parties involved.</li>
+        <li style="list-style-type: circle; float: left;">Earn extra by working part time jobs by your comfort</li>
+        <li style="list-style-type: circle; float: left;">Employment on the basis of skill and not merit.</li>
+        <li style="list-style-type: circle; float: left;">Choice of selecting worker based on reviews.</li>
+        <li style="list-style-type: circle; float: left;">Work to get your work done" approach.</li>
+        <li style="list-style-type: circle; float: left;">Work to get your work done" approach.</li>
+        <li style="list-style-type: circle; float: left;">Negotiating pay, deadline etc. is left to the users.</li>
+        <li style="list-style-type: circle; float: left;">No interference of a middleman.</li>
+        <li style="list-style-type: circle; float: left;">No work limits or restrictions on working hours.</li></h4></p>
+   </ul>
     </div>
+      </div>
     
    
 
-    <!-- Footer Section Start -->
-    <footer>
+ <footer>
       <!-- Footer Area Start -->
       <section class="footer-Content">
         <div class="container">
@@ -102,12 +129,10 @@
               <div class="widget">
                 <h3 class="block-title">Quik Links</h3>
                 <ul class="menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="tnc.php">Terms of Use</a></li>
+                  <li><a href="privacy.php">Privacy Policy</a></li>
                 </ul>
               </div>
             </div>

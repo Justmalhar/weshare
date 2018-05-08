@@ -1,3 +1,12 @@
+<?php
+session_start();
+  if(isset($_SESSION['login-status']) == 1) {
+         header("location: account-home.php");
+  }
+
+  include("config.php");
+
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,15 +75,14 @@
                           <ul class="nav navbar-nav top-nav-text" style="font-family: 'Ubuntu',sans-serif; text-transform: uppercase; font-weight: 500; font-size: 40px;">
                             <li class="active"><a href="index.php">Home</a></li>
                             <li><a href="about.php">About</a></li> 
-                            <li><a href="resume.html">How It Works</a></li> 
-                            <li><a href="resume.html">Contact</a></li> 
+                            <li><a href="howitworks.php">How It Works</a></li> 
                           </ul>
                     <div class="collapse navbar-collapse" id="navbar">
                       <ul class="nav navbar-nav navbar-right">
                         <li><a href="login.php"><i class="lnr lnr-enter"></i> Login</a></li>
                         <li><a href="signup.php"><i class="lnr lnr-user"></i> Signup</a></li>
                         <li class="postadd">
-                          <a class="btn btn-common btn-text" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
+                          <a class="btn-yellow btn btn-common btn-text" href="post-job.php"><span class="fa fa-plus-circle"></span> Post an Ad</a>
                         </li>
                       </ul>
                     </div>
@@ -86,14 +94,12 @@
 <div id="wowslider-container1">
 <div class="ws_images"><ul>
     <li><img src="data1/images/3.jpg" alt="3" title="3" id="wows1_0"/></li>
-    <li><a href="http://wowslider.net"><img src="data1/images/1.jpg" alt="slideshow javascript" title="1" id="wows1_1"/></a></li>
+    <li><img src="data1/images/1.jpg" alt="slideshow javascript" title="1" id="wows1_1"/></li>
     <li><img src="data1/images/2.jpg" alt="2" title="2" id="wows1_2"/></li>
   </ul></div>
-  <div class="ws_bullets"><div>
-    <a href="#" title="3"><span><img src="data1/tooltips/3.jpg" alt="3"/>1</span></a>
-    <a href="#" title="1"><span><img src="data1/tooltips/1.jpg" alt="1"/>2</span></a>
-    <a href="#" title="2"><span><img src="data1/tooltips/2.jpg" alt="2"/>3</span></a>
-  </div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">image slider</a> by WOWSlider.com v8.8m</div>
+  
+</div>
+</div>
 <div class="ws_shadow"></div>
 </div>  
 <script type="text/javascript" src="engine1/wowslider.js"></script>
@@ -114,8 +120,8 @@
           <div class="overlay">
             <div class="container">
               <div class="main-text">
-                <h1 class="intro-title">Welcome To WeWork</h1>
-                <p class="sub-title">Post jobs, get jobs. It's that easy!</p>
+                <!--<h1 class="intro-title">Welcome To WeWork</h1>-->
+                <h1 class="intro-title" style="margin-bottom: 45px;">Post jobs, get jobs. It's that easy!</h1>
 
                 <!-- Start Search box -->
                 <div class="row search-bar">
@@ -250,328 +256,7 @@
         </div>
       </section>
 
-      <div class="container">
-        <div class="section latest-jobs-ads">
-          <div class="section-title tab-manu">
-            <h4>Latest Jobs</h4>
-             <!-- Nav tabs -->      
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#hot-jobs" data-toggle="tab" aria-expanded="true">Hot Jobs</a></li>
-              <li role="presentation" class=""><a href="#recent-jobs" data-toggle="tab" aria-expanded="false">Recent Jobs</a></li>
-              <li role="presentation" class=""><a href="#popular-jobs" data-toggle="tab" aria-expanded="false">Popular Jobs</a></li>
-            </ul>
-          </div>
-
-          <div class="tab-content">
-            <div role="tabpanel" class="tab-pane fade active in" id="hot-jobs">
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/3.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">CTO</a> @ <a href="#">Volja Events &amp; Entertainment</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/1.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Project Manager</a> @ <a href="#">Dominos Pizza</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-            
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/2.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Graphics Designer</a> @ <a href="#">AOK Security</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/4.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Human Resource Manager</a> @ <a href="#">Dropbox Inc</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->
-            </div><!-- tab-pane -->
-
-            <div role="tabpanel" class="tab-pane fade" id="recent-jobs">
-            
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/2.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Graphics Designer</a> @ <a href="#">AOK Security</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/1.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Project Manager</a> @ <a href="#">Dominos Pizza</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/4.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Human Resource Manager</a> @ <a href="#">Dropbox Inc</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->            
-            
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/3.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">CTO</a> @ <a href="#">Volja Events &amp; Entertainment</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-            </div><!-- tab-pane -->
-
-            <div role="tabpanel" class="tab-pane fade" id="popular-jobs">
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/1.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Project Manager</a> @ <a href="#">Dominos Pizza</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-            
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/2.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Graphics Designer</a> @ <a href="#">AOK Security</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-            
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/3.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">CTO</a> @ <a href="#">Volja Events &amp; Entertainment</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->  
-
-              <div class="job-ad-item">
-                <div class="item-info">
-                  <div class="item-image-box">
-                    <div class="item-image">
-                      <a href="job-details.html"><img src="images/job/4.png" alt="Image" class="img-responsive"></a>
-                    </div><!-- item-image -->
-                  </div>
-
-                  <div class="ad-info">
-                    <span><a href="job-details.html" class="title">Human Resource Manager</a> @ <a href="#">Dropbox Inc</a></span>
-                    <div class="ad-meta">
-                      <ul>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>San Francisco, CA, US </a></li>
-                        <li><a href="#"><i class="fa fa-clock-o" aria-hidden="true"></i>Full Time</a></li>
-                        <li><a href="#"><i class="fa fa-money" aria-hidden="true"></i>$25,000 - $35,000</a></li>
-                        <li><a href="#"><i class="fa fa-tags" aria-hidden="true"></i>HR/Org. Development</a></li>
-                      </ul>
-                    </div><!-- ad-meta -->                  
-                  </div><!-- ad-info -->
-                  <div class="button">
-                    <a href="#" class="btn btn-common btn-text">Apply Now</a>
-                  </div>
-                </div><!-- item-info -->
-              </div><!-- ad-item -->
-            </div><!-- tab-pane -->
-          </div><!-- tab-content -->
-        </div>
-      </div>
+      
       <!-- Dummy container starts-->
       <div class="container"> 
         <div class="section cta cta-two text-center">
@@ -635,12 +320,10 @@
     					<div class="widget">
     						<h3 class="block-title">Quik Links</h3>
   							<ul class="menu">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Categories</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Contact</a></li>
-                  <li><a href="#">Terms of Use</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="about.php">About</a></li>
+                  <li><a href="tnc.php">Terms of Use</a></li>
+                  <li><a href="privacy.php">Privacy Policy</a></li>
                 </ul>
     					</div>
     				</div>
